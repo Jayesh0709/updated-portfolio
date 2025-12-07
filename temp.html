@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .skills {
+            height: auto;
+            width: 100%;
+        }
+
+        .skill {
+            font-size: 3rem;
+            height: 110px;
+            font-weight: 900;
+            width: 100%;
+            color: white;
+            margin: auto;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            padding-left: 30px;
+            overflow: hidden;
+            position: relative
+        }
+
+        .skills hr {
+            border: none;
+            height: 0.7px;
+            margin: 0px;
+        }
+
+        .skill img {
+            height: 65px;
+            display: none;
+            top: 0;
+            left: 0;
+            /* transform: translate(-50%, -50%); */
+            position: absolute;
+            pointer-events: none;
+        }
+
+        @media (max-width:600px) {
+            .skills hr {
+                display: none;
+
+            }
+
+            .skills {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .skill {
+                background-color: rgba(9, 9, 171, 0.6);
+                font-size: 2rem;
+                border: 1px solid black;
+                width: 40%;
+                padding-left: 0px;
+                flex-wrap: wrap;
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="skills">
+        <div class="skill">HTML <img src="html-5.png" alt=""></div>
+        <hr>
+        <div class="skill">CSS <img src="css.png" alt=""></div>
+        <hr>
+        <div class="skill">Java Script <img src="js.png" alt=""></div>
+        <hr>
+        <div class="skill">ExpressJs <img src="nodejs.png" alt=""></div>
+        <hr>
+        <div class="skill">MongoDB <img src="react.png" alt=""></div>
+        <hr>
+        <div class="skill">Git <img src="icons8-git-48.png" alt=""></div>
+        <hr>
+        <div class="skill">Java <img src="react.png" alt=""></div>
+        <hr>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let skills = document.querySelectorAll(".skill")
+
+        skills.forEach(el => {
+            let display = el.querySelector("img")
+            display.style.display = "none";
+            el.addEventListener("mouseenter", () => {
+                // el.querySelector("img").style.display = "block";
+                gsap.to(el, {
+                    // scale:1,
+                    color: "orange",
+                    ease: "power3.out",
+
+                })
+
+            })
+
+            el.addEventListener("mousemove", (e) => {
+                const react = el.getBoundingClientRect();
+                gsap.to(display, {
+                    x: e.clientX - react.left,
+                    y: e.clientY - react.top,
+                    ease: "none",
+                    duration: 0.5,
+                    opacity: 1,
+                    scale: 1
+
+                })
+            })
+            el.addEventListener("mouseleave", () => {
+                // el.querySelector("img").style.display = "none";
+                gsap.to(el, {
+                    color: "white",
+                    ease: "power2.out"
+                })
+
+            })
+        })
+    </script>
+</body>
+
+</html>

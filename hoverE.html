@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Tilt Card Effect</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:   #b50909;
+
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .card-container {
+
+            perspective: 1000px;
+            width: 300px;
+            height: 400px;
+        }
+
+        .tilt-card {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            transition: transform 0.1s ease-out;
+            transform-style: preserve-3d;
+        }
+
+        .tilt-card h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .tilt-card p {
+            margin-bottom: 20px;
+        }
+
+        .tilt-card button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff9900;
+            color: #1a1a2e;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tilt-card button:hover {
+            background-color: #ffb347;
+        }
+
+
+
+        .karu {
+            position: absolute;
+            top: 10px;
+        }
+
+
+
+        img{
+            /* background-color: red; */
+            height: 100px;
+            width: 100px;
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="link.png" alt="">
+    <!-- <button class="karu">click me</button>
+    <div class="card-container">
+        <div class="tilt-card" id="my-tilt-card">
+            <h2>parallax effect</h2>
+            <p>this was trail to making parallx effect</p>
+            <button>submit</button>
+        </div>
+    </div> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const card = document.getElementById('my-tilt-card');
+        // const maxRotation = 15;
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width;
+            const y = (e.clientY - rect.top) / rect.height;
+
+            gsap.to(card, {
+                rotateY: (x - 0.5) * 20,
+                rotateX: -(y - 0.5) * 20,
+                duration: 0.2,
+            });
+        });
+
+        // ---------    masti -------
+
+     
+
+
+        card.addEventListener("mouseleave", () => {
+            gsap.to(card, { rotateX: 0, rotateY: 0, duration: 0.3 });
+        });
+    </script>
+</body>
+
+</html>
