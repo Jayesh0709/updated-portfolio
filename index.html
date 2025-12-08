@@ -356,7 +356,8 @@
         }
 
         .skills h5,
-        .projects h5 {
+        .projects h5,
+        .contact h5 {
             /* padding-left: 30px; */
             color: #1be0ad;
             font-size: large;
@@ -378,7 +379,7 @@
         .projects {
             margin: auto;
             margin-top: 4rem;
-            height: 500px;
+            /* height: 500px;    */
             max-width: 1200px;
             width: auto;
 
@@ -422,10 +423,171 @@
             height: 17rem;
             width: 14rem;
             object-fit: contain;
+        }
+
+        .contact {
+            /* height: 500px; */
+            /* border: 1px solid white; */
+            margin: auto;
+            max-width: 1200px;
 
         }
 
+        .contact_box,
+        .direct_con {
+            /* height: 20rem; */
+            width: 40%;
+            border: 1px solid #021c78f5;
+            border-radius: 20px;
+            background-color: #3b405212;
+        }
 
+        .inner_cont {
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 5rem;
+        }
+
+        input {
+            padding-left: 20px;
+            height: 48px;
+            border: none;
+            border-radius: 15px;
+            background-color: #3a3939;
+            color: white;
+        }
+
+        form {
+            gap: 10px;
+            display: grid;
+            padding: 37px;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: rgba(255, 255, 255, 0.614);
+        }
+
+        textarea {
+            resize: none;
+            /* overflow: scroll; */
+            height: 4.3rem;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: #3a3939;
+            border: none;
+            color: white;
+        }
+
+        .submit {
+            height: 40px;
+            width: 99%;
+            border-radius: 10px;
+            margin: auto;
+            background-color: #474444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bolder;
+            letter-spacing: 1.2px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .submit:hover {
+            background-color: #09976fb6;
+        }
+
+        .line_fir {
+            display: flex;
+            align-items: center;
+            padding-left: 40px;
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        .line_fir h3 {
+            font-size: 2rem;
+            color: white;
+            line-height: 15px;
+        }
+
+        .line_em {
+            padding-left: 34px;
+            font-size: 15px;
+            color: white;
+            letter-spacing: 1.2px;
+        }
+
+        .line_fir img {
+            height: 30px;
+            width: 30px;
+            filter: brightness(0) invert(1);
+        }
+
+        .direct_con h1 {
+            color: white;
+            padding-left: 40px;
+            margin-top: 30px;
+        }
+
+        .contact_boxes {
+            justify-content: center;
+            display: grid;
+            /* grid-template-columb: repeat(2, 1fr); */
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px auto;
+            width: 80%;
+            /* border: 1px solid white; */
+        }
+
+        .contact_boxi {
+            height: 55px;
+            width: 98px;
+            border: 1px solid #021c78f5;
+            padding: 8px 0px;
+            display: flex;
+            justify-content: center;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .contact_boxi img {
+            height: 30px;
+        }
+
+        /* ------   footer  ------ */
+
+        footer {
+            height: 50px;
+            width: 80%;
+            margin: auto;
+            /* border: 1px solid white; */
+            margin: 50px auto -0px auto;
+            border-radius: 10px 10px 0px 0px;
+            max-width: 1200px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(32px);
+            position: relative;
+            bottom: 0;
+        }
+
+
+
+        /* footer img{
+            height: 10x;
+            width:10px
+        } */
         button img {
             height: 20px;
             width: 20px;
@@ -524,6 +686,35 @@
                 margin-top: 6rem;
             }
 
+            .inner_cont {
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+
+            }
+
+            .contact_box,
+            .direct_con {
+                width: 80%;
+                transform-style: preserve-3d;
+                will-change: transform;
+            }
+
+            .line_fir {
+                margin-top: 0px;
+            }
+
+            form {
+                gap: 2px;
+            }
+
+            .submit {
+                margin: 0px auto 20px auto;
+            }
+            footer{
+                height: 30px;
+            }
+
         }
     </style>
 </head>
@@ -545,13 +736,13 @@
                 <h1>Hello,</h1>
                 <h1>This is <span class="namecolor">Jayesh Gehlot</span> , I'm a Professional Software Developer.</h1>
                 <div class="connect_me">
-                    <img src="icons8-leetcode-24.png" alt="">
-                    <img src="icons8-github-30.png" alt="">
-                    <img src="in.png" alt="">
+                    <img src="./images/icons8-leetcode-24.png" alt="">
+                    <img src="./images/icons8-github-30.png" alt="">
+                    <img src="./images/in.png" alt="">
                 </div>
                 <div class="buttons">
-                    <button>CONTACT ME <img src="contact.png" alt=""></button>
-                    <button id="resume">GET RESUME <img src="download.png" alt=""></button>
+                    <button>CONTACT ME <img src="./images/contact.png" alt=""></button>
+                    <button id="resume">GET RESUME <img src="./images/download.png" alt=""></button>
                 </div>
             </div>
 
@@ -682,31 +873,31 @@
         <h5>SKILLS</h5>
         <hr>
         <div class="skill">
-            <h1>HTML</h1> <img src="html-5.png" alt="">
+            <h1>HTML</h1> <img src="./images/html-5.png" alt="">
         </div>
         <hr>
         <div class="skill">
-            <h1>CSS</h1> <img src="css.png" alt="">
+            <h1>CSS</h1> <img src="./images/css.png" alt="">
         </div>
         <hr>
         <div class="skill">
-            <h1>Java Script</h1> <img src="js.png" alt="">
+            <h1>Java Script</h1> <img src="./images/js.png" alt="">
         </div>
         <hr>
         <div class="skill">
-            <h1>ExpressJs</h1> <img src="nodejs.png" alt="">
+            <h1>ExpressJs</h1> <img src="./images/nodejs.png" alt="">
         </div>
         <hr>
         <div class="skill">
-            <h1>MongoDB</h1> <img src="react.png" alt="">
+            <h1>MongoDB</h1> <img src="./images/react.png" alt="">
         </div>
         <hr>
         <div class="skill">
-            <h1>Git</h1> <img src="icons8-git-48.png" alt="">
+            <h1>Git</h1> <img src="./images/icons8-git-48.png" alt="">
         </div>
         <hr>
         <div class="skill">
-            <h1>Java</h1> <img src="react.png" alt="">
+            <h1>Java</h1> <img src="./images/react.png" alt="">
         </div>
         <hr>
     </section>
@@ -716,43 +907,88 @@
             <div class="project">
                 <img src="https://www.startergroup.in/image/cache/catalog/demo/school%20level/project-management-6-550x550w.jpg"
                     alt="">
-                <!-- <div class="links_container"> -->
                 <img style="height: 30px; width: 30px; position: absolute; display: none; margin-right:60px "
-                    class="link_icon" src="link.png" alt="">
+                    class="link_icon" src="./images/link.png" alt="">
                 <img style="height: 30px; width: 30px; position: absolute; display: none; margin-left:60px "
-                    class="link_icon" src="code.png" alt="">
-                <!-- </div> -->
+                    class="link_icon" src="./images/code.png" alt="">
             </div>
             <div class="project">
                 <img src="https://www.startergroup.in/image/cache/catalog/demo/school%20level/project-management-6-550x550w.jpg"
                     alt="">
                 <img style="height: 30px; width: 30px; position: absolute; display: none; margin-right:60px "
-                    class="link_icon" src="link.png" alt="">
+                    class="link_icon" src="./images/link.png" alt="">
                 <img style="height: 30px; width: 30px; position: absolute; display: none; margin-left:60px "
-                    class="link_icon" src="code.png" alt="">
+                    class="link_icon" src="./images/code.png" alt="no">
             </div>
             <div class="project">
                 <img src="https://www.startergroup.in/image/cache/catalog/demo/school%20level/project-management-6-550x550w.jpg"
                     alt="">
                 <img style="height: 30px; width: 30px; position: absolute; display: none; margin-right:60px "
-                    class="link_icon" src="link.png" alt="">
+                    class="link_icon" src="./images/link.png" alt="">
                 <img style="height: 30px; width: 30px; position: absolute; display: none; margin-left:60px "
-                    class="link_icon" src="code.png" alt="">
+                    class="link_icon" src="./images/code.png" alt="">
             </div>
             <div class="project">
                 <img src="https://www.startergroup.in/image/cache/catalog/demo/school%20level/project-management-6-550x550w.jpg"
                     alt="">
                 <img style="height: 30px; width: 30px; position: absolute; display: none; margin-right:60px "
-                    class="link_icon" src="link.png" alt="">
+                    class="link_icon" src="./images/link.png" alt="">
                 <img style="height: 30px; width: 30px; position: absolute; display: none; margin-left:60px "
-                    class="link_icon" src="code.png" alt="">
+                    class="link_icon" src="./images/code.png" alt="">
             </div>
         </div>
     </section>
+
+    <section class="contact">
+        <h5>CONTACT</h5>
+        <div class="inner_cont">
+            <div class="contact_box">
+                <form action="">
+                    <input type="text" placeholder="Name ✍️">
+                    <br>
+                    <input type="text" placeholder="Email ✉️"><br>
+                    <input type="text" placeholder="Phone 📞"><br>
+                    <textarea name="" placeholder="Message 💬" id=""></textarea>
+                    <br>
+                    <div class="submit">🚀 Submit</div>
+                </form>
+
+            </div>
+            <div class="direct_con">
+                <div class="line_fir">
+                    <img src="./images/emailp.png" alt="">
+                    <h3>Direct Line</h3>
+                </div>
+                <div class="line_em">
+                    gehlotjayesh65@gmail.com
+                </div>
+                <h1>Digital Playground</h1>
+                <div class="contact_boxes">
+                    <div class="contact_boxi">
+                        <img src="./images/email.png" alt="">
+                    </div>
+                    <div class="contact_boxi">
+                        <img src="./images/linkedin.png" alt="">
+                    </div>
+                    <div class="contact_boxi">
+                        <img src="" alt="">
+                    </div>
+                    <div class="contact_boxi">
+                        <img src="./images/github-sign.png" alt="">
+                    </div>
+                </div>
+                <div class="submit" style="width: 90%;">Get My Blue Print</div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <h4>© Jayehs Gehlot</h4>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
         integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+      
         function skills_fun() {
             let skills = document.querySelectorAll(".skill")
 
@@ -792,46 +1028,84 @@
                 })
             })
         }
+        function project() {
+            let pro_img = document.querySelectorAll(".project")
 
+            pro_img.forEach(el => {
+                // el.querySelectorAll(".link_icon")[0].style.display = "none";
+                // el.querySelectorAll(".link_icon")[1].style.display = "none";
+                let icons = el.querySelectorAll(".link_icon");
+                el.addEventListener("mouseenter", () => {
+                    icons.forEach(i => i.style.display = "block");
+                    gsap.to(icons, {
+                        opacity: 1,
+                        filter: "brightness(0)"
+                        // display: "block"
+                    })
+                    gsap.to(el.querySelector("img"), {
+                        scale: 1.2,
+                        filter: "blur(4px)",
+                        // duration:0.5,
+                        // ease:"power4.out"
+                    })
+                })
+
+                el.addEventListener("mouseleave", () => {
+                    let t1 = gsap.timeline();
+                    t1.to(icons, {
+                        opacity: 0,
+                        duration: 0.1,
+
+                    })
+                    t1.add(() => icons.forEach(i => i.style.display = "none"));
+                    t1.to(el.querySelector("img"), {
+                        scale: 1,
+                        filter: "blur(0px)"
+                    })
+                })
+            });
+        }
         skills_fun()
+        project()
 
-
-        let pro_img = document.querySelectorAll(".project")
-
-        pro_img.forEach(el => {
-            // el.querySelectorAll(".link_icon")[0].style.display = "none";
-            // el.querySelectorAll(".link_icon")[1].style.display = "none";
-            let icons = el.querySelectorAll(".link_icon");
-            el.addEventListener("mouseenter", () => {
-                icons.forEach(i => i.style.display = "block");
-                gsap.to(icons, {
-                    opacity: 1,
-                    // display: "block"
-                })
-                gsap.to(el.querySelector("img"), {
-                    scale: 1.2,
-                    filter: "brightness(0.2)",
-                    // duration:0.5,
-                    // ease:"power4.out"
-                })
+        let contact_box = document.querySelector(".contact_box");
+        contact_box.addEventListener("mousemove", (e) => {
+            const rect = contact_box.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width;
+            const y = (e.clientY - rect.top) / rect.height;
+            gsap.to(contact_box, {
+                rotateY: (x - 0.5) * 20,
+                rotateX: -(y - 0.5) * 20,
+                // ease:"power3.out",
+                duration: 0.2
             })
-
-            el.addEventListener("mouseleave", () => {
-                let t1 = gsap.timeline();
-                t1.to(icons, {
-                    opacity: 0,
-                    duration: 0.1,
-
-                })
-                t1.add(() => icons.forEach(i => i.style.display = "none"));
-                t1.to(el.querySelector("img"), {
-                    scale: 1,
-                    filter: "blur(0px)"
-                })
+        })
+        contact_box.addEventListener("mouseleave", () => {
+            gsap.to(contact_box, {
+                rotateX: 0,
+                rotateY: 0,
+                duration: 0.3
             })
-        });
-
-
+        })
+        let another = document.querySelector(".direct_con");
+        another.addEventListener("mousemove", (e) => {
+            const rect = another.getBoundingClientRect();
+            const x = (e.clientX - rect.left) / rect.width;
+            const y = (e.clientY - rect.top) / rect.height;
+            gsap.to(another, {
+                rotateY: (x - 0.5) * 20,
+                rotateX: -(y - 0.5) * 20,
+                // ease:"power3.out",
+                duration: 0.2
+            })
+        })
+        another.addEventListener("mouseleave", () => {
+            gsap.to(another, {
+                rotateX: 0,
+                rotateY: 0,
+                duration: 0.3
+            })
+        })
     </script>
 </body>
 
