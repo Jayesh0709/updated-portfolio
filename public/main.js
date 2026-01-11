@@ -134,8 +134,24 @@ function contact_ani() {
 }
 
 
+function myResume() {
+    console.log("clicked")
+    fetch('/dowload', {
+        method: "GET"
+    })
+        .then(() => { console.log("done") })
+        .catch((er) => { console.log("error occur") });
+}
+
 
 skills_fun()
 project()
 contact_ani()
 
+
+
+let alt = document.getElementById("alert");
+
+setTimeout(() => {
+    alt.style.display = "none";
+}, 7000);
