@@ -206,6 +206,11 @@
       color: white;
   }
 
+  li a:hover {
+      text-decoration: none;
+      color: white;
+  }
+
   #home {
       height: auto;
       width: auto;
@@ -571,7 +576,7 @@
 
   .project div {
       position: absolute;
-      transform: translate(-30px,-13px);
+      transform: translate(-30px, -13px);
   }
 
   .contact {
@@ -756,6 +761,11 @@
   }
 
   @media (max-width:600px) {
+
+      .line_em {
+          margin-top: 10px;
+      }
+
       .home_col1 {
           /* min-width: 22rem; */
           min-width: 19rem;
@@ -851,7 +861,7 @@
       }
 
       .line_fir {
-          margin-top: 0px;
+          margin-top: 25px;
       }
 
       form {
